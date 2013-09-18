@@ -1,0 +1,8 @@
+build/
+
+# user-specific Xcode stuff
+*.pbxuser
+xcuserdata
+
+Example/Pods
+Tests/Pods

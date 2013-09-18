@@ -1,0 +1,16 @@
+xcodeproj 'ILTMDb Tests'
+workspace '../ILTMDb'
+
+inhibit_all_warnings!
+
+def import_pods
+  pod 'Expecta', '~> 0.2.1'
+  pod 'AFNetworking', '~> 1.3.0'
+  pod 'ILTMDb', :path => '../'
+end
+
+target :ios do
+  platform :ios, '6.0'
+  link_with 'Tests'
+  import_pods
+end
