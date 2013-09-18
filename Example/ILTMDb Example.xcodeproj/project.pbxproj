@@ -18,6 +18,8 @@
 		F816DC6D17E8D3090085A6F4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F816DC6717E8D3090085A6F4 /* Default@2x.png */; };
 		F816DC7817E8D9320085A6F4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F816DC7717E8D9320085A6F4 /* SystemConfiguration.framework */; };
 		F816DC7A17E8D9360085A6F4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F816DC7917E8D9360085A6F4 /* MobileCoreServices.framework */; };
+		F821430B17E9EF49003A5F8F /* MoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F821430A17E9EF49003A5F8F /* MoviesViewController.m */; };
+		F821430D17E9FCA0003A5F8F /* placeholderImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F821430C17E9FCA0003A5F8F /* placeholderImage.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		F816DC6717E8D3090085A6F4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F816DC7717E8D9320085A6F4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F816DC7917E8D9360085A6F4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F821430917E9EF49003A5F8F /* MoviesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesViewController.h; sourceTree = "<group>"; };
+		F821430A17E9EF49003A5F8F /* MoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesViewController.m; sourceTree = "<group>"; };
+		F821430C17E9FCA0003A5F8F /* placeholderImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholderImage.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +96,7 @@
 		F816DC5E17E8D3090085A6F4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F821430817E9EE5D003A5F8F /* Controllers */,
 				F816DC5F17E8D3090085A6F4 /* ILAppDelegate.h */,
 				F816DC6017E8D3090085A6F4 /* ILAppDelegate.m */,
 				F816DC6117E8D3090085A6F4 /* Support */,
@@ -114,8 +120,18 @@
 				F816DC6517E8D3090085A6F4 /* Default-568h@2x.png */,
 				F816DC6617E8D3090085A6F4 /* Default.png */,
 				F816DC6717E8D3090085A6F4 /* Default@2x.png */,
+				F821430C17E9FCA0003A5F8F /* placeholderImage.jpg */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		F821430817E9EE5D003A5F8F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F821430917E9EF49003A5F8F /* MoviesViewController.h */,
+				F821430A17E9EF49003A5F8F /* MoviesViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +191,7 @@
 				F816DC6B17E8D3090085A6F4 /* Default-568h@2x.png in Resources */,
 				F816DC6C17E8D3090085A6F4 /* Default.png in Resources */,
 				F816DC6D17E8D3090085A6F4 /* Default@2x.png in Resources */,
+				F821430D17E9FCA0003A5F8F /* placeholderImage.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +237,7 @@
 			files = (
 				F816DC6817E8D3090085A6F4 /* ILAppDelegate.m in Sources */,
 				F816DC6A17E8D3090085A6F4 /* main.m in Sources */,
+				F821430B17E9EF49003A5F8F /* MoviesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

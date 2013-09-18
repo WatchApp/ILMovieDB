@@ -33,6 +33,6 @@
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>TMDbApiKey</key>
-	<string></string>
+	<string>YOUR_API_KEY</string>
 </dict>
 </plist>

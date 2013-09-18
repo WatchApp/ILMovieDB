@@ -1,4 +1,4 @@
-// ILAppDelegate.m
+// MoviesViewController.h
 //
 // Copyright (c) 2013 Gustavo Leguizamon (http://goopi.me)
 //
@@ -20,28 +20,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "ILAppDelegate.h"
-#import "MoviesViewController.h"
-#import <ILTMDbAPIClient.h>
-
-@implementation ILAppDelegate
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];
-    [NSURLCache setSharedURLCache:URLCache];
-
-    [ILTMDbAPIClient sharedClient].apiKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"TMDbApiKey"];
-
-    UITableViewController *viewController = [[MoviesViewController alloc] initWithStyle:UITableViewStylePlain];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
-
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = self.navigationController;
-    [self.window makeKeyAndVisible];
-
-    return YES;
-}
+@interface MoviesViewController : UITableViewController
 
 @end
