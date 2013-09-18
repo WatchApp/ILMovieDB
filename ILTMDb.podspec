@@ -2,10 +2,10 @@ Pod::Spec.new do |s|
   s.name     = 'ILTMDb'
   s.version  = '0.0.1'
   s.license  = 'MIT'
-  s.summary  = 'TMDb api client.'
-  s.homepage = 'https://github.com/WatchApp/TMDb'
+  s.summary  = 'ILTMDb is a iOS library for interact with themoviedb.org API v3.'
+  s.homepage = 'https://github.com/WatchApp/ILTMDb'
   s.authors  = { 'Gustavo Leguizamon' => 'gustavo@irbislab.com' }
-  s.source   = { :git => 'https://github.com/WatchApp/TMDb.git', :tag => '0.0.1' }
+  s.source   = { :git => 'https://github.com/WatchApp/ILTMDb.git', :tag => '0.0.1' }
   s.source_files = 'ILTMDb'
   s.requires_arc = true
   s.dependency 'AFNetworking', '~> 1.3.0'
