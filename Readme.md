@@ -5,8 +5,8 @@ ILMovieDB is a iOS library for interact with themoviedb.org API v3.
 ## Usage
 
 ```objective-c
-[ILTMDbAPIClient sharedClient].apiKey = @"YOUR_API_KEY";
-[[ILTMDbAPIClient sharedClient] getPath:kILTMDbAPIMovieTheatresPathString parameters:nil block:^(id responseData, NSError *error) {
+[ILMovieDBClient sharedClient].apiKey = @"YOUR_API_KEY";
+[[ILMovieDBClient sharedClient] getPath:kILTMDbAPIMovieTheatresPathString parameters:nil block:^(id responseData, NSError *error) {
     if (!error) {
         NSLog(@"%@", responseData);
     }
@@ -17,7 +17,7 @@ ILMovieDB is a iOS library for interact with themoviedb.org API v3.
 
 ```objective-c
 NSDictionary *params = @{@"id": @"500"};
-[[ILTMDbAPIClient sharedClient] getPath:kILTMDbAPIMoviePathString parameters:params block:^(id responseData, NSError *error) {
+[[ILMovieDBClient sharedClient] getPath:kILTMDbAPIMoviePathString parameters:params block:^(id responseData, NSError *error) {
     if (!error) {
         NSLog(@"%@", responseData);
     }
@@ -59,7 +59,7 @@ To run the unit tests, you must install the testing dependencies via CocoaPods. 
     $ cd Tests
     $ pod install
 
-Once CocoaPods has finished the installation, you have to set the `apiKey` key in the "ILMovieDB.plist" (for the Example app, use "Info.plist").
+Once CocoaPods has finished the installation, you have to set the `MovieDBApiKey` key in the "ILMovieDB.plist" (for the Example app, use "Info.plist").
 
 Now you can execute the test suite via the 'Tests' scheme within Xcode.
 
