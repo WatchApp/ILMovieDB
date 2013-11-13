@@ -1,6 +1,6 @@
-# ILTMDb
+# ILMovieDB
 
-ILTMDb is a iOS library for interact with themoviedb.org API v3.
+ILMovieDB is a iOS library for interact with themoviedb.org API v3.
 
 ## Usage
 
@@ -45,11 +45,11 @@ NSDictionary *params = @{@"id": @"500"};
 
 ## Requirements
 
-ILTMDb requires [iOS 6.0](https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS6.html) and above.
+ILMovieDB requires [iOS 7.0](https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS7.html) and above.
 
 ### ARC
 
-ILTMDb uses ARC.
+ILMovieDB uses ARC.
 
 ## Unit Tests
 
@@ -59,7 +59,7 @@ To run the unit tests, you must install the testing dependencies via CocoaPods. 
     $ cd Tests
     $ pod install
 
-Once CocoaPods has finished the installation, you have to set the `TMDbApiKey` key in the "ILTMDb-Api.plist" (for the Example app, use "Info.plist").
+Once CocoaPods has finished the installation, you have to set the `apiKey` key in the "ILMovieDB.plist" (for the Example app, use "Info.plist").
 
 Now you can execute the test suite via the 'Tests' scheme within Xcode.
 

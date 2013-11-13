@@ -1,5 +1,4 @@
-//
-// ILTMDbAPIClient.h
+// ILMovieDBClient.h
 //
 // Copyright (c) 2013 Gustavo Leguizamon (http://goopi.me)
 //
@@ -25,11 +24,11 @@
 
 typedef void (^ILTMDbAPIClientResponseBlock)(id responseData, NSError *error);
 
-@interface ILTMDbAPIClient : AFHTTPClient
+@interface ILMovieDBClient : AFHTTPClient
 
 @property (nonatomic, copy) NSString *apiKey;
 
-+ (ILTMDbAPIClient *)sharedClient;
++ (ILMovieDBClient *)sharedClient;
 - (void)getPath:(NSString *)path parameters:(NSDictionary *)parameters block:(ILTMDbAPIClientResponseBlock)block;
 
 ///-------------------------

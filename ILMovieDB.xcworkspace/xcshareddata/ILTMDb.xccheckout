@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0CFEF267-8C64-402C-A73C-2141265DE854</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ILTMDb</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>04BEC03E-2B09-404E-892A-CFF6334BBF52</key>
+		<string>ssh://github.com/WatchApp/ILTMDb.git</string>
+		<key>FF925596-18B6-4505-8BAC-0A38064F39B6</key>
+		<string>ssh://github.com/AFNetworking/AFNetworking.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ILTMDb.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>04BEC03E-2B09-404E-892A-CFF6334BBF52</key>
+		<string>..</string>
+		<key>FF925596-18B6-4505-8BAC-0A38064F39B6</key>
+		<string>../Vendor/AFNetworking</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/WatchApp/ILTMDb.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>04BEC03E-2B09-404E-892A-CFF6334BBF52</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FF925596-18B6-4505-8BAC-0A38064F39B6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AFNetworking</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>04BEC03E-2B09-404E-892A-CFF6334BBF52</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ILTMDb</string>
+		</dict>
+	</array>
+</dict>
+</plist>

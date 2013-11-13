@@ -1,0 +1,1 @@
+<?xml version='1.0' encoding='UTF-8'?><Workspace version='1.0'><FileRef location='group:ILMovieDB.xcodeproj'/><FileRef location='group:Tests/ILMovieDB Tests.xcodeproj'/><FileRef location='group:Example/ILMovieDB Example.xcodeproj'/><FileRef location='group:Tests/Pods/Pods.xcodeproj'/><FileRef location='group:Example/Pods/Pods.xcodeproj'/></Workspace>

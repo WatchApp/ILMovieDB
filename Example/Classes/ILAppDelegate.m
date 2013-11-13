@@ -22,7 +22,7 @@
 
 #import "ILAppDelegate.h"
 #import "MoviesViewController.h"
-#import <ILTMDbAPIClient.h>
+#import "ILMovieDBClient.h"
 
 @implementation ILAppDelegate
 
@@ -30,7 +30,7 @@
     NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];
     [NSURLCache setSharedURLCache:URLCache];
 
-    [ILTMDbAPIClient sharedClient].apiKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"TMDbApiKey"];
+    [ILMovieDBClient sharedClient].apiKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"MovieDBApiKey"];
 
     UITableViewController *viewController = [[MoviesViewController alloc] initWithStyle:UITableViewStylePlain];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];

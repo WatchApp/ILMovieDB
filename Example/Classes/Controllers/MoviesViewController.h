@@ -21,5 +21,4 @@
 // THE SOFTWARE.
 
 @interface MoviesViewController : UITableViewController
-
 @end

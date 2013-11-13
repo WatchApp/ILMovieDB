@@ -1,5 +1,4 @@
-//
-// ILTMDbAPIClientTests.m
+// ILMovieDBClientTests.m
 //
 // Copyright (c) 2013 Gustavo Leguizamon (http://goopi.me)
 //
@@ -21,19 +20,19 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "ILTMDbAPIClient.h"
-#import "ILTMDbTests.h"
+#import "ILMovieDBTests.h"
+#import "ILMovieDBClient.h"
 
-@interface ILTMDbAPIClientTests : SenTestCase
-@property (nonatomic, strong) ILTMDbAPIClient *client;
+@interface ILMovieDBClientTests : SenTestCase
+@property (nonatomic, strong) ILMovieDBClient *client;
 @end
 
-@implementation ILTMDbAPIClientTests
+@implementation ILMovieDBClientTests
 
 - (void)setUp {
-    NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"ILTMDb-Api" ofType:@"plist"];
-    self.client = [ILTMDbAPIClient sharedClient];
-    self.client.apiKey = [NSDictionary dictionaryWithContentsOfFile:path][@"TMDbApiKey"];
+    NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"ILMovieDB" ofType:@"plist"];
+    self.client = [ILMovieDBClient sharedClient];
+    self.client.apiKey = [NSDictionary dictionaryWithContentsOfFile:path][@"MovieDBApiKey"];
 }
 
 #pragma mark -

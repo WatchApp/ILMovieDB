@@ -1,5 +1,4 @@
-//
-// ILTMDbAPIClient.m
+// ILMovieDBClient.m
 //
 // Copyright (c) 2013 Gustavo Leguizamon (http://goopi.me)
 //
@@ -22,7 +21,7 @@
 // THE SOFTWARE.
 
 #import "AFJSONRequestOperation.h"
-#import "ILTMDbAPIClient.h"
+#import "ILMovieDBClient.h"
 
 static NSString * const kILTMDbAPIBaseURLString = @"http://api.themoviedb.org/3/";
 
@@ -41,10 +40,10 @@ NSString * const kILTMDbAPIMovieTopRatedPathString = @"movie/top_rated";
 NSString * const kILTMDbAPIPersonPathString = @"person/:id";
 NSString * const kILTMDbAPIPersonSearchPathString = @"search/person";
 
-@implementation ILTMDbAPIClient
+@implementation ILMovieDBClient
 
-+ (ILTMDbAPIClient *)sharedClient {
-    static ILTMDbAPIClient *_sharedClient = nil;
++ (ILMovieDBClient *)sharedClient {
+    static ILMovieDBClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedClient = [[self alloc] initWithBaseURL:[NSURL URLWithString:kILTMDbAPIBaseURLString]];
@@ -65,7 +64,7 @@ NSString * const kILTMDbAPIPersonSearchPathString = @"search/person";
     return self;
 }
 
-#pragma mark -
+#pragma mark - HTTP Requests
 
 - (void)getPath:(NSString *)path parameters:(NSDictionary *)parameters block:(ILTMDbAPIClientResponseBlock)block {
     NSParameterAssert(self.apiKey);

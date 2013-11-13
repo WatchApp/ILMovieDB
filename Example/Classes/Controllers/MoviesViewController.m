@@ -20,10 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "MoviesViewController.h"
+#import "UIImageView+AFNetworking.h"
 
-#import <ILTMDbAPIClient.h>
-#import <UIImageView+AFNetworking.h>
+#import "MoviesViewController.h"
+#import "ILMovieDBClient.h"
 
 @interface MoviesViewController ()
 
@@ -41,7 +41,7 @@
         return nil;
     }
 
-    [[ILTMDbAPIClient sharedClient] getPath:kILTMDbAPIConfigurationPathString parameters:nil block:^(id responseData, NSError *error) {
+    [[ILMovieDBClient sharedClient] getPath:kILTMDbAPIConfigurationPathString parameters:nil block:^(id responseData, NSError *error) {
         if (!error) {
             self.imagesBaseUrlString = [responseData[@"images"][@"base_url"] stringByAppendingString:@"w185"];
         }
@@ -54,7 +54,7 @@
     [self.activityIndicatorView startAnimating];
     self.navigationItem.rightBarButtonItem.enabled = NO;
 
-    [[ILTMDbAPIClient sharedClient] getPath:kILTMDbAPIMovieTheatresPathString parameters:nil block:^(id responseData, NSError *error) {
+    [[ILMovieDBClient sharedClient] getPath:kILTMDbAPIMovieTheatresPathString parameters:nil block:^(id responseData, NSError *error) {
         if (!error) {
             self.movies = responseData[@"results"];
             [self.tableView reloadData];

@@ -1,7 +1,8 @@
 namespace :test do
-  desc "Run the ILTMDb Tests"
+  desc "Run the ILMovieDB Tests"
   task :all do
-    $success = system("xctool -workspace ILTMDb.xcworkspace -scheme Tests -sdk iphonesimulator -configuration Release test -test-sdk iphonesimulator")
+    system("xctool clean -workspace ILMovieDB.xcworkspace -scheme Tests")
+    $success = system("xctool -workspace ILMovieDB.xcworkspace -scheme Tests -sdk iphonesimulator7.0 ONLY_ACTIVE_ARCH=NO -configuration Release test -test-sdk iphonesimulator -arch i386")
   end
 end
 

@@ -1,5 +1,4 @@
-//
-// ILTMDbTests.h
+// ILMovieDBTests.h
 //
 // Copyright (c) 2013 Gustavo Leguizamon (http://goopi.me)
 //
