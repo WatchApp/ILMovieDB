@@ -10,6 +10,7 @@
 		F816DBCF17E8964D0085A6F4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F816DBCE17E8964D0085A6F4 /* SystemConfiguration.framework */; };
 		F816DBD117E896530085A6F4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F816DBD017E896530085A6F4 /* MobileCoreServices.framework */; };
 		F86CAC6417E82E2900791FF7 /* ILMovieDBClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F86CAC3717E82C1500791FF7 /* ILMovieDBClient.m */; };
+		F8E32DB318348660008957FE /* ILMovieDBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E32DB218348660008957FE /* ILMovieDBConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +52,8 @@
 		F8A55FE618343964003687E2 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		F8A55FE718343964003687E2 /* AFURLSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		F8A55FE818343964003687E2 /* AFURLSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		F8E32DB118348660008957FE /* ILMovieDBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILMovieDBConstants.h; sourceTree = "<group>"; };
+		F8E32DB218348660008957FE /* ILMovieDBConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILMovieDBConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 			children = (
 				F86CAC3617E82C1500791FF7 /* ILMovieDBClient.h */,
 				F86CAC3717E82C1500791FF7 /* ILMovieDBClient.m */,
+				F8E32DB118348660008957FE /* ILMovieDBConstants.h */,
+				F8E32DB218348660008957FE /* ILMovieDBConstants.m */,
 				F86CAC6517E82FC400791FF7 /* Support */,
 			);
 			path = ILMovieDB;
@@ -198,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F86CAC6417E82E2900791FF7 /* ILMovieDBClient.m in Sources */,
+				F8E32DB318348660008957FE /* ILMovieDBConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

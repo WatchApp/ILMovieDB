@@ -63,7 +63,7 @@
     }];
 
     params = @{@"query": @"The Godfather"};
-    [self.client GET:kILMovieDBMovieSearch parameters:params block:^(id responseObject, NSError *error) {
+    [self.client GET:kILMovieDBSearchMovie parameters:params block:^(id responseObject, NSError *error) {
         secondCallbackData = responseObject;
     }];
 

@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "AFHTTPRequestOperationManager.h"
+#import "ILMovieDBConstants.h"
 
 typedef void (^ILMovieDBClientResponseBlock)(id responseObject, NSError *error);
 
@@ -43,24 +44,5 @@ typedef void (^ILMovieDBClientResponseBlock)(id responseObject, NSError *error);
  @param success A block object to be executed when the request operation finishes successfully or unsuccessfully.
  */
 - (AFHTTPRequestOperation *)GET:(NSString *)path parameters:(NSDictionary *)parameters block:(ILMovieDBClientResponseBlock)block;
-
-///-------------------------
-/// @name API Resources Path
-///-------------------------
-
-extern NSString * const kILMovieDBConfiguration;
-extern NSString * const kILMovieDBPerson;
-extern NSString * const kILMovieDBPersonSearch;
-extern NSString * const kILMovieDBMovieSearch;
-extern NSString * const kILMovieDBMovie;
-extern NSString * const kILMovieDBMovieSimilar;
-extern NSString * const kILMovieDBMovieCasts;
-extern NSString * const kILMovieDBMovieImages;
-extern NSString * const kILMovieDBMovieTrailers;
-extern NSString * const kILMovieDBMovieUpcoming;
-extern NSString * const kILMovieDBMovieTheatres;
-extern NSString * const kILMovieDBMovieTopRated;
-extern NSString * const kILMovieDBGenreList;
-extern NSString * const kILMovieDBGenreMovies;
 
 @end

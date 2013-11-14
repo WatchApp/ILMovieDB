@@ -22,23 +22,6 @@
 
 #import "ILMovieDBClient.h"
 
-static NSString * const kILMovieDBBaseURL = @"http://api.themoviedb.org/3/";
-
-NSString * const kILMovieDBConfiguration = @"configuration";
-NSString * const kILMovieDBGenreList = @"genre/list";
-NSString * const kILMovieDBGenreMovies = @"genre/:id/movies";
-NSString * const kILMovieDBMovieSearch = @"search/movie";
-NSString * const kILMovieDBMovie = @"movie/:id";
-NSString * const kILMovieDBMovieCasts = @"movie/:id/casts";
-NSString * const kILMovieDBMovieImages = @"movie/:id/images";
-NSString * const kILMovieDBMovieTrailers = @"movie/:id/trailers";
-NSString * const kILMovieDBMovieSimilar = @"movie/:id/similar_movies";
-NSString * const kILMovieDBMovieUpcoming = @"movie/upcoming";
-NSString * const kILMovieDBMovieTheatres = @"movie/now_playing";
-NSString * const kILMovieDBMovieTopRated = @"movie/top_rated";
-NSString * const kILMovieDBPerson = @"person/:id";
-NSString * const kILMovieDBPersonSearch = @"search/person";
-
 @implementation ILMovieDBClient
 
 + (ILMovieDBClient *)sharedClient {
