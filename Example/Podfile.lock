@@ -19,7 +19,7 @@ PODS:
   - AFNetworking/Serialization (2.0.2)
   - AFNetworking/UIKit (2.0.2):
     - AFNetworking/NSURLConnection
-  - ILMovieDB (0.0.1):
+  - ILMovieDB (0.0.2):
     - AFNetworking (~> 2.0.2)
 
 DEPENDENCIES:
@@ -32,6 +32,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 22de50ae71ab1c4859773f61068d6fcd1d8f9a4d
-  ILMovieDB: 46103355b3539b95de1e6c8081745c825c2db1ac
+  ILMovieDB: 2ebb154f786c61497d9678fac6e92e42d0c4e017
 
 COCOAPODS: 0.27.1
