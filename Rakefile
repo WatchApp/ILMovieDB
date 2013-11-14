@@ -2,7 +2,7 @@ namespace :test do
   desc "Run the ILMovieDB Tests"
   task :all do
     system("xctool clean -workspace ILMovieDB.xcworkspace -scheme Tests")
-    $success = system("xctool -workspace ILMovieDB.xcworkspace -scheme Tests -sdk iphonesimulator7.0 ONLY_ACTIVE_ARCH=NO -configuration Release test -test-sdk iphonesimulator -arch i386")
+    $success = system("xctool -workspace ILMovieDB.xcworkspace -scheme Tests -sdk iphonesimulator7.0 ONLY_ACTIVE_ARCH=NO -configuration Debug test -test-sdk iphonesimulator -arch i386")
   end
 end
 

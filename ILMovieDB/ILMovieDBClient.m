@@ -28,7 +28,12 @@
     static ILMovieDBClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedClient = [[self alloc] initWithBaseURL:[NSURL URLWithString:kILMovieDBBaseURL]];
+#if DEBUG
+        NSString *baseUrl = kILMovieDBBaseURL;
+#else
+        NSString *baseUrl = kILMovieDBBaseURLSSL;
+#endif
+        _sharedClient = [[self alloc] initWithBaseURL:[NSURL URLWithString:baseUrl]];
         _sharedClient.requestSerializer = [AFJSONRequestSerializer new];
     });
     return _sharedClient;
