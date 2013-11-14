@@ -6,9 +6,9 @@ ILMovieDB is a iOS library for interact with themoviedb.org API v3.
 
 ```objective-c
 [ILMovieDBClient sharedClient].apiKey = @"YOUR_API_KEY";
-[[ILMovieDBClient sharedClient] getPath:kILTMDbAPIMovieTheatresPathString parameters:nil block:^(id responseData, NSError *error) {
+[[ILMovieDBClient sharedClient] GET:kILMovieDBMovieTheatres parameters:nil block:^(id responseObject, NSError *error) {
     if (!error) {
-        NSLog(@"%@", responseData);
+        NSLog(@"%@", responseObject);
     }
 }];
 ```
@@ -17,9 +17,9 @@ ILMovieDB is a iOS library for interact with themoviedb.org API v3.
 
 ```objective-c
 NSDictionary *params = @{@"id": @"500"};
-[[ILMovieDBClient sharedClient] getPath:kILTMDbAPIMoviePathString parameters:params block:^(id responseData, NSError *error) {
+[[ILMovieDBClient sharedClient] GET:kILMovieDBMovie parameters:params block:^(id responseObject, NSError *error) {
     if (!error) {
-        NSLog(@"%@", responseData);
+        NSLog(@"%@", responseObject);
     }
 }];
 ```
