@@ -26,26 +26,15 @@ NSDictionary *params = @{@"id": @"500"};
 
 ## Available methods
 
-| Resource | API url |
-|:-----------:|:------------:|
-| kILTMDbAPIConfigurationPathString | configuration |
-| kILTMDbAPIGenreListPathString | genre/list |
-| kILTMDbAPIGenreMoviesPathString | genre/:id/movies |
-| kILTMDbAPIMovieSearchPathString | search/movie |
-| kILTMDbAPIMoviePathString | movie/:id |
-| kILTMDbAPIMovieCastsPathString | movie/:id/casts |
-| kILTMDbAPIMovieImagesPathString | movie/:id/images |
-| kILTMDbAPIMovieTrailersPathString | movie/:id/trailers |
-| kILTMDbAPIMovieSimilarPathString | movie/:id/similar_movies |
-| kILTMDbAPIMovieUpcomingPathString | movie/upcoming |
-| kILTMDbAPIMovieTheatresPathString | movie/now_playing |
-| kILTMDbAPIMovieTopRatedPathString | movie/top_rated |
-| kILTMDbAPIPersonPathString | person/:id |
-| kILTMDbAPIPersonSearchPathString | search/person |
+For now, only the `GET` methods are included. See the [Method list](https://github.com/WatchApp/ILMovieDB/blob/master/ILMovieDB/ILMovieDBConstants.h).
 
 ## Requirements
 
 ILMovieDB requires [iOS 7.0](https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS7.html) and above.
+
+### Dependencies
+
+[AFNetworking](https://github.com/AFNetworking/AFNetworking) 2.0.0 or superior.
 
 ### ARC
 
@@ -72,6 +61,12 @@ To install the commandline testing support via Homebrew:
     $ brew install xctool
 
 Once xctool is installed, you can execute the suite via `rake test`.
+
+## Contact
+
+- If you want to get in touch, [send an email](mailto:gustavo@irbislab.com)
+- Follow [Me](https://twitter.com/leguizamongus) on Twitter
+- [http://goopi.me/](http://goopi.me/)
 
 ## License
 
