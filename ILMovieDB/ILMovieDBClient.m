@@ -20,25 +20,24 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AFJSONRequestOperation.h"
 #import "ILMovieDBClient.h"
 
-static NSString * const kILTMDbAPIBaseURLString = @"http://api.themoviedb.org/3/";
+static NSString * const kILMovieDBBaseURL = @"http://api.themoviedb.org/3/";
 
-NSString * const kILTMDbAPIConfigurationPathString = @"configuration";
-NSString * const kILTMDbAPIGenreListPathString = @"genre/list";
-NSString * const kILTMDbAPIGenreMoviesPathString = @"genre/:id/movies";
-NSString * const kILTMDbAPIMovieSearchPathString = @"search/movie";
-NSString * const kILTMDbAPIMoviePathString = @"movie/:id";
-NSString * const kILTMDbAPIMovieCastsPathString = @"movie/:id/casts";
-NSString * const kILTMDbAPIMovieImagesPathString = @"movie/:id/images";
-NSString * const kILTMDbAPIMovieTrailersPathString = @"movie/:id/trailers";
-NSString * const kILTMDbAPIMovieSimilarPathString = @"movie/:id/similar_movies";
-NSString * const kILTMDbAPIMovieUpcomingPathString = @"movie/upcoming";
-NSString * const kILTMDbAPIMovieTheatresPathString = @"movie/now_playing";
-NSString * const kILTMDbAPIMovieTopRatedPathString = @"movie/top_rated";
-NSString * const kILTMDbAPIPersonPathString = @"person/:id";
-NSString * const kILTMDbAPIPersonSearchPathString = @"search/person";
+NSString * const kILMovieDBConfiguration = @"configuration";
+NSString * const kILMovieDBGenreList = @"genre/list";
+NSString * const kILMovieDBGenreMovies = @"genre/:id/movies";
+NSString * const kILMovieDBMovieSearch = @"search/movie";
+NSString * const kILMovieDBMovie = @"movie/:id";
+NSString * const kILMovieDBMovieCasts = @"movie/:id/casts";
+NSString * const kILMovieDBMovieImages = @"movie/:id/images";
+NSString * const kILMovieDBMovieTrailers = @"movie/:id/trailers";
+NSString * const kILMovieDBMovieSimilar = @"movie/:id/similar_movies";
+NSString * const kILMovieDBMovieUpcoming = @"movie/upcoming";
+NSString * const kILMovieDBMovieTheatres = @"movie/now_playing";
+NSString * const kILMovieDBMovieTopRated = @"movie/top_rated";
+NSString * const kILMovieDBPerson = @"person/:id";
+NSString * const kILMovieDBPersonSearch = @"search/person";
 
 @implementation ILMovieDBClient
 
@@ -46,29 +45,20 @@ NSString * const kILTMDbAPIPersonSearchPathString = @"search/person";
     static ILMovieDBClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedClient = [[self alloc] initWithBaseURL:[NSURL URLWithString:kILTMDbAPIBaseURLString]];
+        _sharedClient = [[self alloc] initWithBaseURL:[NSURL URLWithString:kILMovieDBBaseURL]];
+        _sharedClient.requestSerializer = [AFJSONRequestSerializer new];
     });
-
     return _sharedClient;
 }
 
-- (id)initWithBaseURL:(NSURL *)url {
-    self = [super initWithBaseURL:url];
-    if (!self) {
-        return nil;
-    }
+#pragma mark - Requests
 
-    [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
-    [self setDefaultHeader:@"Accept" value:@"application/json"];
-
-    return self;
-}
-
-#pragma mark - HTTP Requests
-
-- (void)getPath:(NSString *)path parameters:(NSDictionary *)parameters block:(ILTMDbAPIClientResponseBlock)block {
+- (AFHTTPRequestOperation *)GET:(NSString *)path parameters:(NSDictionary *)parameters block:(ILMovieDBClientResponseBlock)block {
     NSParameterAssert(self.apiKey);
-    NSMutableDictionary *params = parameters ? [parameters mutableCopy] : [@{} mutableCopy];
+    NSParameterAssert(block);
+
+    AFHTTPRequestOperation *requestOperation;
+    NSMutableDictionary *params = parameters ? [parameters mutableCopy] : [NSMutableDictionary new];
     params[@"api_key"] = self.apiKey;
 
     if ([path rangeOfString:@":id"].location != NSNotFound) {
@@ -76,11 +66,13 @@ NSString * const kILTMDbAPIPersonSearchPathString = @"search/person";
         path = [path stringByReplacingOccurrencesOfString:@":id" withString:parameters[@"id"]];
     }
 
-    [super getPath:path parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    requestOperation = [self GET:path parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         block(responseObject, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         block(nil, error);
     }];
+
+    return requestOperation;
 }
 
 @end

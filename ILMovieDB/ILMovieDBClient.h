@@ -20,34 +20,47 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AFHTTPClient.h"
+#import "AFHTTPRequestOperationManager.h"
 
-typedef void (^ILTMDbAPIClientResponseBlock)(id responseData, NSError *error);
+typedef void (^ILMovieDBClientResponseBlock)(id responseObject, NSError *error);
 
-@interface ILMovieDBClient : AFHTTPClient
+@interface ILMovieDBClient : AFHTTPRequestOperationManager
 
 @property (nonatomic, copy) NSString *apiKey;
 
-+ (ILMovieDBClient *)sharedClient;
-- (void)getPath:(NSString *)path parameters:(NSDictionary *)parameters block:(ILTMDbAPIClientResponseBlock)block;
+/**
+ Creates and returns an `ILMovieDBClient` object.
+ */
++ (instancetype)sharedClient;
+
+#pragma mark - Requests
+
+/**
+ Creates and runs an `AFHTTPRequestOperation` with a `GET` request.
+
+ @param path The resource path used to create the request URL.
+ @param parameters The parameters to be encoded by `AFJSONRequestSerializer`.
+ @param success A block object to be executed when the request operation finishes successfully or unsuccessfully.
+ */
+- (AFHTTPRequestOperation *)GET:(NSString *)path parameters:(NSDictionary *)parameters block:(ILMovieDBClientResponseBlock)block;
 
 ///-------------------------
 /// @name API Resources Path
 ///-------------------------
 
-extern NSString * const kILTMDbAPIConfigurationPathString;
-extern NSString * const kILTMDbAPIPersonPathString;
-extern NSString * const kILTMDbAPIPersonSearchPathString;
-extern NSString * const kILTMDbAPIMovieSearchPathString;
-extern NSString * const kILTMDbAPIMoviePathString;
-extern NSString * const kILTMDbAPIMovieSimilarPathString;
-extern NSString * const kILTMDbAPIMovieCastsPathString;
-extern NSString * const kILTMDbAPIMovieImagesPathString;
-extern NSString * const kILTMDbAPIMovieTrailersPathString;
-extern NSString * const kILTMDbAPIMovieUpcomingPathString;
-extern NSString * const kILTMDbAPIMovieTheatresPathString;
-extern NSString * const kILTMDbAPIMovieTopRatedPathString;
-extern NSString * const kILTMDbAPIGenreListPathString;
-extern NSString * const kILTMDbAPIGenreMoviesPathString;
+extern NSString * const kILMovieDBConfiguration;
+extern NSString * const kILMovieDBPerson;
+extern NSString * const kILMovieDBPersonSearch;
+extern NSString * const kILMovieDBMovieSearch;
+extern NSString * const kILMovieDBMovie;
+extern NSString * const kILMovieDBMovieSimilar;
+extern NSString * const kILMovieDBMovieCasts;
+extern NSString * const kILMovieDBMovieImages;
+extern NSString * const kILMovieDBMovieTrailers;
+extern NSString * const kILMovieDBMovieUpcoming;
+extern NSString * const kILMovieDBMovieTheatres;
+extern NSString * const kILMovieDBMovieTopRated;
+extern NSString * const kILMovieDBGenreList;
+extern NSString * const kILMovieDBGenreMovies;
 
 @end

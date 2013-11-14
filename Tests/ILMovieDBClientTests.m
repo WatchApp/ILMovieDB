@@ -42,8 +42,8 @@
 
     __block id callbackData = nil;
 
-    [self.client getPath:kILTMDbAPIConfigurationPathString parameters:nil block:^(id responseData, NSError *error) {
-        callbackData = responseData;
+    [self.client GET:kILMovieDBConfiguration parameters:nil block:^(id responseObject, NSError *error) {
+        callbackData = responseObject;
     }];
 
     expect(callbackData).willNot.beNil();
@@ -58,13 +58,13 @@
     __block id secondCallbackData = nil;
 
     params = @{@"id": @"500"};
-    [self.client getPath:kILTMDbAPIMoviePathString parameters:params block:^(id responseData, NSError *error) {
-        firstCallbackData = responseData;
+    [self.client GET:kILMovieDBMovie parameters:params block:^(id responseObject, NSError *error) {
+        firstCallbackData = responseObject;
     }];
 
     params = @{@"query": @"The Godfather"};
-    [self.client getPath:kILTMDbAPIMovieSearchPathString parameters:params block:^(id responseData, NSError *error) {
-        secondCallbackData = responseData;
+    [self.client GET:kILMovieDBMovieSearch parameters:params block:^(id responseObject, NSError *error) {
+        secondCallbackData = responseObject;
     }];
 
     expect(firstCallbackData).willNot.beNil();
@@ -77,7 +77,7 @@
 - (void)testGetPathFail {
     __block id callbackError = nil;
 
-    [self.client getPath:@"path" parameters:nil block:^(id responseData, NSError *error) {
+    [self.client GET:@"path" parameters:nil block:^(id responseObject, NSError *error) {
         callbackError = error;
     }];
 

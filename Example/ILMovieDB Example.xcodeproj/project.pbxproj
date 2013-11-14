@@ -10,66 +10,7 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>348FD5661B3E4234A26F2BCD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-ios.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods-ios.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3BBE18668F14424C8CA24FFF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-ios-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>4E643CCD6CE24CB1B5DFE535</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C8889F5080A6453E92DAD51B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C8889F5080A6453E92DAD51B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-ios.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>E3247631C451497EAB53B57B</key>
+		<key>34DC0CF2A2D747FBA471669A</key>
 		<dict>
 			<key>buildActionMask</key>
 			<string>2147483647</string>
@@ -95,6 +36,50 @@ error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or up
 EOM
     exit 1
 fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>82FE7F1C991A4130B5BBD92F</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-ios.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>B52C3B178C304486BDBA6AB9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>82FE7F1C991A4130B5BBD92F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E54118EE57ED4647A2BB59F1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-ios-resources.sh"
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
@@ -133,7 +118,7 @@ fi
 				<string>F816DC7B17E8DD690085A6F4</string>
 				<string>F816DC4017E8D1360085A6F4</string>
 				<string>F816DC3F17E8D1360085A6F4</string>
-				<string>348FD5661B3E4234A26F2BCD</string>
+				<string>FDCE30F4BEA749F59D451C47</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -220,7 +205,7 @@ fi
 				<string>F816DC4217E8D1360085A6F4</string>
 				<string>F816DC4417E8D1360085A6F4</string>
 				<string>F816DC4617E8D1360085A6F4</string>
-				<string>4E643CCD6CE24CB1B5DFE535</string>
+				<string>B52C3B178C304486BDBA6AB9</string>
 			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
@@ -249,11 +234,11 @@ fi
 			<string>F816DC5B17E8D1360085A6F4</string>
 			<key>buildPhases</key>
 			<array>
-				<string>E3247631C451497EAB53B57B</string>
+				<string>34DC0CF2A2D747FBA471669A</string>
 				<string>F816DC3A17E8D1360085A6F4</string>
 				<string>F816DC3B17E8D1360085A6F4</string>
 				<string>F816DC3C17E8D1360085A6F4</string>
-				<string>3BBE18668F14424C8CA24FFF</string>
+				<string>E54118EE57ED4647A2BB59F1</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -279,7 +264,7 @@ fi
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>path</key>
-			<string>ILTMDb Example.app</string>
+			<string>ILMovieDB Example.app</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
@@ -305,7 +290,7 @@ fi
 				<string>F816DC4117E8D1360085A6F4</string>
 				<string>F816DC4317E8D1360085A6F4</string>
 				<string>F816DC4517E8D1360085A6F4</string>
-				<string>C8889F5080A6453E92DAD51B</string>
+				<string>82FE7F1C991A4130B5BBD92F</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -496,7 +481,7 @@ fi
 		<key>F816DC5C17E8D1360085A6F4</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>348FD5661B3E4234A26F2BCD</string>
+			<string>FDCE30F4BEA749F59D451C47</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
@@ -520,7 +505,7 @@ fi
 		<key>F816DC5D17E8D1360085A6F4</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>348FD5661B3E4234A26F2BCD</string>
+			<string>FDCE30F4BEA749F59D451C47</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
@@ -799,6 +784,21 @@ fi
 			<string>F821430C17E9FCA0003A5F8F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>FDCE30F4BEA749F59D451C47</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-ios.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods-ios.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>

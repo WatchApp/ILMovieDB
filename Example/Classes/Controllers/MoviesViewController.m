@@ -41,9 +41,10 @@
         return nil;
     }
 
-    [[ILMovieDBClient sharedClient] getPath:kILTMDbAPIConfigurationPathString parameters:nil block:^(id responseData, NSError *error) {
+    __weak MoviesViewController *weakSelf = self;
+    [[ILMovieDBClient sharedClient] GET:kILMovieDBConfiguration parameters:nil block:^(id responseObject, NSError *error) {
         if (!error) {
-            self.imagesBaseUrlString = [responseData[@"images"][@"base_url"] stringByAppendingString:@"w185"];
+            weakSelf.imagesBaseUrlString = [responseObject[@"images"][@"base_url"] stringByAppendingString:@"w185"];
         }
     }];
 
@@ -54,14 +55,15 @@
     [self.activityIndicatorView startAnimating];
     self.navigationItem.rightBarButtonItem.enabled = NO;
 
-    [[ILMovieDBClient sharedClient] getPath:kILTMDbAPIMovieTheatresPathString parameters:nil block:^(id responseData, NSError *error) {
+    __weak MoviesViewController *weakSelf = self;
+    [[ILMovieDBClient sharedClient] GET:kILMovieDBMovieTheatres parameters:nil block:^(id responseObject, NSError *error) {
         if (!error) {
-            self.movies = responseData[@"results"];
-            [self.tableView reloadData];
+            weakSelf.movies = responseObject[@"results"];
+            [weakSelf.tableView reloadData];
         }
 
-        [self.activityIndicatorView stopAnimating];
-        self.navigationItem.rightBarButtonItem.enabled = YES;
+        weakSelf.navigationItem.rightBarButtonItem.enabled = YES;
+        [weakSelf.activityIndicatorView stopAnimating];
     }];
 }
 
@@ -80,11 +82,9 @@
     self.title = NSLocalizedString(@"Movies", nil);
 
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.activityIndicatorView];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
-                                                                                           target:self
-                                                                                           action:@selector(reload:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reload:)];
 
-    self.tableView.rowHeight = 140.0f;
+    self.tableView.rowHeight = 140.f;
 
     [self reload:nil];
 }
