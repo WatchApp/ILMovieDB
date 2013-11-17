@@ -24,7 +24,7 @@
 
 @implementation ILMovieDBClient
 
-+ (ILMovieDBClient *)sharedClient {
++ (instancetype)sharedClient {
     static ILMovieDBClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
