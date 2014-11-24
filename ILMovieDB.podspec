@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.source   = { :git => 'https://github.com/WatchApp/ILMovieDB.git', :tag => '0.0.2' }
   s.source_files = 'ILMovieDB'
   s.requires_arc = true
-  s.dependency 'AFNetworking', '~> 2.0.2'
+  s.dependency 'AFNetworking', '~> 2'
 
   s.platform = :ios, '7.0'
   s.ios.frameworks = 'MobileCoreServices', 'SystemConfiguration'
