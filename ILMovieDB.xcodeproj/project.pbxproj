@@ -213,7 +213,7 @@
 		F86CAC2C17E82A3900791FF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
@@ -221,7 +221,7 @@
 		F86CAC2D17E82A3900791FF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Release;
 		};

@@ -10,33 +10,33 @@
 	<string>ILMovieDB</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>31B558E1-157F-4900-B653-C39ABA7407EE</key>
+		<key>3E5391C5112399DF49E142C7BFB03934590B2522</key>
 		<string>ssh://github.com/WatchApp/ILMovieDB.git</string>
-		<key>FF925596-18B6-4505-8BAC-0A38064F39B6</key>
+		<key>DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8</key>
 		<string>ssh://github.com/AFNetworking/AFNetworking.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ILMovieDB.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>31B558E1-157F-4900-B653-C39ABA7407EE</key>
+		<key>3E5391C5112399DF49E142C7BFB03934590B2522</key>
 		<string>..</string>
-		<key>FF925596-18B6-4505-8BAC-0A38064F39B6</key>
+		<key>DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8</key>
 		<string>../Vendor/AFNetworking</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/WatchApp/ILMovieDB.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>31B558E1-157F-4900-B653-C39ABA7407EE</string>
+	<string>3E5391C5112399DF49E142C7BFB03934590B2522</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FF925596-18B6-4505-8BAC-0A38064F39B6</string>
+			<string>DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8</string>
 			<key>IDESourceControlWCCName</key>
 			<string>AFNetworking</string>
 		</dict>
@@ -44,7 +44,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>31B558E1-157F-4900-B653-C39ABA7407EE</string>
+			<string>3E5391C5112399DF49E142C7BFB03934590B2522</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ILMovieDB</string>
 		</dict>

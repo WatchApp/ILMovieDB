@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name     = 'ILMovieDB'
-  s.version  = '0.0.2'
+  s.version  = '0.0.3'
   s.license  = 'MIT'
   s.summary  = 'ILMovieDB is a iOS library for interact with themoviedb.org API v3.'
   s.homepage = 'https://github.com/WatchApp/ILMovieDB'
   s.authors  = { 'Gustavo Leguizamon' => 'gustavo@irbislab.com' }
-  s.source   = { :git => 'https://github.com/WatchApp/ILMovieDB.git', :tag => '0.0.2' }
+  s.source   = { :git => 'https://github.com/WatchApp/ILMovieDB.git', :tag => '0.0.3' }
   s.source_files = 'ILMovieDB'
   s.requires_arc = true
   s.dependency 'AFNetworking', '~> 2.5'

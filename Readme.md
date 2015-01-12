@@ -30,11 +30,11 @@ For now, only the `GET` methods are included. See the [Method list](https://gith
 
 ## Requirements
 
-ILMovieDB requires [iOS 7.0](https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS7.html) and above.
+ILMovieDB requires [iOS 7.1](https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS7_1.html) and above.
 
 ### Dependencies
 
-[AFNetworking](https://github.com/AFNetworking/AFNetworking) 2.0.0 or superior.
+[AFNetworking](https://github.com/AFNetworking/AFNetworking) 2.5.0 or superior.
 
 ### ARC
 
